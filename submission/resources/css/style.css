@@ -1,309 +1,187 @@
-/* Simple Portfolio Styles - Under 100 Lines */
-:root {
-    --primary: #2c3e50;
-    --secondary: #3498db;
-    --light: #ecf0f1;
-    --text: #333;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    color: var(--text);
-    line-height: 1.6;
-}
+/* Basic Portfolio Styles */
 
 /* Navigation */
 nav {
-    background: var(--primary);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
+    background-color: #2c3e50;
+    padding: 15px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 30px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
 }
 
 nav a:hover {
-    color: var(--secondary);
+    color: #3498db;
 }
 
-/* Main Content */
+/* Main */
 main {
     max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 20px auto;
+    padding: 0 15px;
 }
 
 .content-container {
-    background: var(--light);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
-/* Home page section - image next to text */
-section:has(img) {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-}
+/* p {
+    margin-bottom: 10px;
+} */
 
-section:has(img) img {
-    flex-shrink: 0;
-}
-
-section:has(img) .description {
-    flex: 1;
-    /* indent the text */
-    /* text-indent: 2rem; */
-}
-
-h1,
-h2 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
-
-p {
-    margin-bottom: 1rem;
+a {
+    color: #3498db;
 }
 
 img {
     max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-a {
-    color: var(--secondary);
-}
-
-ul {
-    padding-left: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
+    border-radius: 5px;
 }
 
 /* Footer */
 footer {
-    background: var(--primary);
+    background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+    padding: 20px;
+    margin-top: 30px;
 }
 
 footer ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 20px;
 }
 
 footer a {
     color: white;
-    font-size: 1.3rem;
 }
 
 footer a:hover {
-    color: var(--secondary);
+    color: #3498db;
 }
 
-/* Cards for Hobbies */
+/* Home - image next to text */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.horizontal-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;  
+}
+
+.description {
+    flex: 1;
+}
+
+/* Cards */
 .hobby-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 5px;
     text-align: center;
+    flex: 1;
+    min-width: 200px;
 }
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
 }
 
-.card h3 {
-    padding: 0.75rem;
-    color: var(--primary);
-}
-
+.card h3,
 .card p {
-    padding: 0 0.75rem 0.75rem;
-    font-size: 0.9rem;
+    padding: 10px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Resume Page */
+/* Resume */
 .resume-header {
     text-align: center;
 }
 
-.resume-header h1 {
-    font-size: 2rem;
-}
-
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-    font-size: 0.9rem;
-}
-
-.contact-info i {
-    color: var(--secondary);
-    margin-right: 0.3rem;
-}
-
-.resume-section {
-    margin-bottom: 0;
-}
-
-.resume-section h2 {
-    border-bottom: 2px solid var(--secondary);
-    padding-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.resume-section h2 i {
-    color: var(--secondary);
-}
-
-.resume-item {
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.resume-item-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-}
-
-.resume-item-header h3 {
-    color: var(--primary);
-    font-size: 1.1rem;
-}
-
-.resume-subtitle {
-    color: #666;
-    font-style: italic;
-}
-
-/* Skills */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.skill-category h4 {
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.skill-category h4 i {
-    color: var(--secondary);
-    margin-right: 0.3rem;
-}
-
-/* Awards */
-.awards-list {
-    list-style: none;
-    padding: 0;
-}
-
-.awards-list li {
-    padding: 0.5rem 0;
     display: flex;
-    gap: 0.5rem;
+    gap: 20px;
 }
 
-.awards-list i {
-    color: var(--secondary);
-}
-
-/* Buttons */
+/* Button */
 .btn-primary {
-    background: var(--secondary);
+    background-color: #3498db;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 8px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
     text-decoration: none;
-    display: inline-block;
 }
 
 .btn-primary:hover {
-    background: var(--primary);
+    background-color: #2c3e50;
+    color: white;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    section:has(img) {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .resume-item-header {
-        flex-direction: column;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Icons */
-
+/* Nav icons */
 nav .ski-icon,
 nav .proj-icon,
 nav .resume-icon {
     margin-left: auto;
-    padding-right: 5rem;
-    font-size: 1.5rem;
-    color: var(--secondary);
+    color: #3498db;
+}
+
+nav .home-icon {
+    margin-left: auto;
+    color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    /* This line acts as an if statement for the screen size */
+
+    nav ul,
+    /* when screen size is 600px or less, it stacks these as columns */
+    .hobby-cards,
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    nav ul,
+    footer ul,
+    .contact-info {
+        /* when screen size is 600px or less, it centers the nav items and adds 10px of gap */
+        align-items: center;
+        gap: 10px;
+    }
+
+    section,
+    /* when screen size is 600px or less, it stacks these as columns. It will force things underneath */
+    .resume-item-header,
+    .contact-info {
+        flex-direction: column;
+    }
 }
